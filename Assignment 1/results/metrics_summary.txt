@@ -1,0 +1,22 @@
+Biometric verification performance summary
+===================================================================================================
+features  protocol    matcher                 EER %   d-prime       AUC   GAR@FAR=1%   GAR@FAR=0.1%
+---------------------------------------------------------------------------------------------------
+raw       all-pairs   Euclidean distance     15.640     1.526   0.91903       57.40%         43.60%
+raw       all-pairs   Cosine similarity      11.320     1.758   0.94730       74.08%         63.76%
+raw       best-of-5   Euclidean distance      9.400     1.838   0.96259       74.40%         63.40%
+raw       best-of-5   Cosine similarity       5.600     2.025   0.97826       89.80%         84.40%
+z-scored  all-pairs   Euclidean distance     15.840     1.533   0.91850       57.32%         43.68%
+z-scored  all-pairs   Cosine similarity      11.633     2.425   0.95078       52.28%         28.90%
+z-scored  best-of-5   Euclidean distance      9.200     1.858   0.96247       73.80%         63.00%
+z-scored  best-of-5   Cosine similarity       7.566     2.650   0.97350       65.40%         41.20%
+---------------------------------------------------------------------------------------------------
+
+Score statistics (primary protocol: raw features, all-pairs)
+---------------------------------------------------------------------------------------------------
+Euclidean distance   genuine  n=  2,500  mean= 346.85815  std= 173.26406
+                     imposter n=247,500  mean= 732.04788  std= 312.21920
+                     EER = 15.640% at threshold 475.952;  d' = 1.526
+Cosine similarity    genuine  n=  2,500  mean=   0.98556  std=   0.01306
+                     imposter n=247,500  mean=   0.95652  std=   0.01937
+                     EER = 11.320% at threshold 0.974956;  d' = 1.758
